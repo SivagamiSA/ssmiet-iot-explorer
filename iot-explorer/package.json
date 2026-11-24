@@ -1,0 +1,57 @@
+{
+  "name": "iot-explorer",
+  "private": true,
+  "version": "0.3.0",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -n web,api -c yellow,cyan \"vite\" \"node --watch server/src/index.js\"",
+    "dev:web": "vite",
+    "dev:api": "node --watch server/src/index.js",
+    "start:api": "node server/src/index.js",
+    "seed": "node server/scripts/seed-projects.js",
+    "create-admin": "node server/scripts/create-admin.js",
+    "migrate-admins": "node server/scripts/migrate-admins.js",
+    "seed:components": "node server/scripts/seed-components.js",
+    "migrate:schools": "node server/scripts/migrate-school-ids.js",
+    "db:counts": "node server/scripts/db-counts.js",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "check:responsive": "python3 scripts/responsive-check.py http://localhost:5173 / /login /login?tab=admin",
+    "test:api": "node --test server/tests/permissions.test.js server/tests/admin-api.test.js server/tests/final-assessment.test.js server/tests/final-assessment-service.test.js server/tests/db-repair.test.js server/tests/db-errors.test.js",
+    "seed:simulations": "node server/scripts/seed-simulations.js",
+    "db:repair-assessment": "node server/scripts/repair-final-assessment.js",
+    "start": "node server/src/index.js",
+    "test:unit": "node --test server/tests/final-assessment-service.test.js server/tests/db-repair.test.js server/tests/db-errors.test.js"
+  },
+  "dependencies": {
+    "@fontsource-variable/bricolage-grotesque": "^5.1.0",
+    "@fontsource-variable/public-sans": "^5.1.0",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.5.0",
+    "helmet": "^8.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "lucide-react": "^0.460.0",
+    "mongoose": "^8.9.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.28.0",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.11",
+    "concurrently": "^9.1.0"
+  },
+  "engines": {
+    "node": ">=18.18"
+  }
+}

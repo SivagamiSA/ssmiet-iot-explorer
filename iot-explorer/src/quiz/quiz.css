@@ -1,0 +1,8 @@
+/* Print only the certificate, on one landscape page. Does not affect any screen styling. */
+@media print {
+  @page { size: A4 landscape; margin: 0; }
+  body * { visibility: hidden; }
+  .cert-print, .cert-print * { visibility: visible; }
+  .cert-print { position: fixed; left: 0; top: 0; width: 100vw; max-width: none; height: auto; border: 0; border-radius: 0; box-shadow: none; }
+  .no-print { display: none !important; }
+}

@@ -1,0 +1,22 @@
+# Render Blueprint: ONE web service runs the Express API and also serves the built React site (same origin, so /api works with no CORS or API URL).
+services:
+  - type: web
+    name: iot-explorer
+    runtime: node
+    plan: free
+    buildCommand: npm ci --include=dev && npm run build   # vite + typescript are devDependencies, so they must be installed for the build
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: NODE_ENV
+        value: production
+      - key: TRUST_PROXY
+        value: "true"
+      - key: MONGODB_URI
+        sync: false          # paste your Atlas string in the Render dashboard; never commit it
+      - key: JWT_SECRET
+        generateValue: true  # Render creates a long random secret (keep the same value between deploys so logins stay valid)
+      - key: CLIENT_ORIGIN
+        value: https://iotexplorer.com,https://www.iotexplorer.com

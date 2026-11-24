@@ -1,0 +1,57 @@
+/* Simulation lab styles. EVERYTHING is scoped under .sim-root so nothing here can change any other IoT Explorer page.
+   Colours come from the site palette (brand orange, ink, line, surface). The circuit canvas, live simulation and code
+   panels stay dark on purpose: they are "screens" and the part drawings are designed for a dark background. */
+.sim-root{--line:#E2E5EA;--cy:#CC4B06;--tx:#18212D;--mut:#6B7685;--bl:#E8590C;--pu:#CC4B06}
+.sim-root .sim-wrap{display:block}
+.sim-root .panel{background:#fff;border:1px solid var(--line);border-radius:.5rem;padding:1rem;box-shadow:0 1px 2px rgba(24,33,45,.06),0 4px 14px rgba(24,33,45,.05);color:var(--tx);min-width:0}
+.sim-root .panel h3{margin:0 0 .625rem;font-size:1rem;font-weight:600;color:var(--tx)}
+.sim-root .panel-dark{background:#0f172a;border-color:#1e293b;color:#e5ecff;--line:#22305f;--cy:#22d3ee;--mut:#93a4d0;--tx:#e5ecff}
+.sim-root .panel-dark h3{color:#22d3ee}
+.sim-root .muted{color:var(--mut);font-size:.875rem}
+
+/* buttons: same shape as the site's .btn-primary / .btn-outline, a little more compact for toolbars */
+.sim-root .btn{display:inline-flex;align-items:center;justify-content:center;gap:.375rem;min-height:2.5rem;padding:0 1rem;border-radius:.375rem;border:1px solid var(--line);background:#fff;color:var(--tx);cursor:pointer;font-weight:600;font-size:.875rem;transition:background-color .2s,border-color .2s,color .2s;text-decoration:none}
+.sim-root .btn:hover:not(:disabled){border-color:#E8590C;color:#CC4B06;background:#FFF4EC}
+.sim-root .btn:disabled{opacity:.5;cursor:not-allowed}
+.sim-root .btn-primary{background:#E8590C;border-color:#E8590C;color:#fff}
+.sim-root .btn-primary:hover:not(:disabled){background:#CC4B06;border-color:#CC4B06;color:#fff}
+.sim-root .btn-ok{background:#15803d;border-color:#15803d;color:#fff}
+.sim-root .btn-ok:hover:not(:disabled){background:#166534;border-color:#166534;color:#fff}
+.sim-root .btn-warn{background:#FFF4EC;border-color:#F5B38A;color:#A63B04}
+.sim-root .btn-warn:hover:not(:disabled){background:#FFE5D1;border-color:#E8590C;color:#A63B04}
+.sim-root .panel-dark .btn{background:#16214d;border-color:#22305f;color:#e5ecff}
+.sim-root .panel-dark .btn:hover:not(:disabled){border-color:#22d3ee;color:#e5ecff;background:#16214d}
+
+.sim-root .chip{display:inline-block;padding:.1875rem .625rem;border-radius:999px;border:1px solid var(--line);font-size:.75rem;color:var(--mut);background:#fff;cursor:pointer}
+.sim-root .chip.on{background:#E8590C;color:#fff;border-color:#E8590C}
+.sim-root .badge{padding:.125rem .5625rem;border-radius:999px;font-size:.6875rem;font-weight:700}
+.sim-root .b-Beginner{background:#F0FDF4;color:#166534}
+.sim-root .b-Intermediate{background:#FFFBEB;color:#92400E}
+.sim-root .b-Advanced{background:#FEF2F2;color:#991B1B}
+.sim-root .b-done{background:#F0FDF4;color:#166534}
+.sim-root .b-guided{background:#FFF4EC;color:#A63B04}
+
+.sim-root .pcard{display:flex;flex-direction:column;gap:.625rem}
+.sim-root .pcard .art{height:92px;border-radius:.5rem;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#E8590C,#A63B04);position:relative;overflow:hidden}
+.sim-root .pcard .art::before{content:'';position:absolute;inset:0;background-image:linear-gradient(#ffffff1f 1px,transparent 1px),linear-gradient(90deg,#ffffff1f 1px,transparent 1px);background-size:14px 14px}
+
+.sim-root input[type=text],.sim-root input[type=search]{background:#fff;border:1px solid var(--line);color:var(--tx);padding:.5rem .75rem;border-radius:.375rem;min-width:220px;min-height:2.5rem}
+.sim-root input[type=search]:focus{border-color:#E8590C;outline:none;box-shadow:0 0 0 2px rgba(232,89,12,.3)}
+.sim-root input[type=range]{width:100%;accent-color:#E8590C}
+.sim-root select{background:#fff;border:1px solid var(--line);color:var(--tx);padding:.375rem;border-radius:.375rem}
+.sim-root .panel-dark input[type=range]{accent-color:#22d3ee}
+
+.sim-root .code{background:#050917;color:#e5ecff;border:1px solid #22305f;border-radius:.5rem;padding:.75rem;overflow:auto;max-height:340px;font:12.5px/1.55 Consolas,Menlo,monospace}
+.sim-root .k{color:#c084fc}.sim-root .t{color:#22d3ee}.sim-root .n{color:#fbbf24}.sim-root .s{color:#86efac}.sim-root .c{color:#64748b}.sim-root .p{color:#f472b6}
+.sim-root .lcd{background:#8bc34a;color:#14320a;font:700 18px/1.3 'Courier New',monospace;padding:10px 14px;border-radius:8px;border:4px solid #334155;white-space:pre;box-shadow:inset 0 0 14px #0004;overflow-x:auto}
+.sim-root .pin{cursor:pointer}.sim-root .pin:hover{r:8}
+.sim-root .wave{transform-box:fill-box;transform-origin:center;animation:sim-wave 1.8s ease-out infinite}
+@keyframes sim-wave{from{transform:scale(.05);opacity:.9}to{transform:scale(1);opacity:0}}
+.sim-root .pulse{transform-box:fill-box;transform-origin:center;animation:sim-pulse .7s ease-out infinite}
+@keyframes sim-pulse{from{transform:scale(.8);opacity:.9}to{transform:scale(1.9);opacity:0}}
+.sim-root .glow{filter:drop-shadow(0 0 7px currentColor)}
+.sim-root .sbtn{width:70px;height:70px;border-radius:50%;border:4px solid #475569;background:radial-gradient(circle at 30% 30%,#ef4444,#991b1b);color:#fff;font-weight:800;cursor:pointer;box-shadow:0 6px 0 #450a0a;transition:.08s;user-select:none;touch-action:none}
+.sim-root .sbtn.down{transform:translateY(5px);box-shadow:0 1px 0 #450a0a}
+.sim-root .sbtn:disabled{opacity:.5;cursor:not-allowed}
+.sim-root .ok-t{color:#166534}.sim-root .bad-t{color:#991b1b}
+@media (prefers-reduced-motion:reduce){.sim-root *{animation:none!important;transition:none!important}}

@@ -1,0 +1,2203 @@
+{
+  "title": "Arduino Project and Component MCQ Assessment",
+  "total_questions": 150,
+  "difficulty_levels": {
+    "Basic": "Core purpose, identification and fundamental operation",
+    "Intermediate": "Program logic, readings, functions and circuit behaviour",
+    "Difficult": "Troubleshooting, applying conditions and interpreting calculations"
+  },
+  "project_categories": {
+    "total_projects": 21,
+    "total_questions": 100,
+    "projects": {
+      "LM35 Temperature Monitor with TFT Display and Buzzer": [
+        {
+          "id": 1,
+          "difficulty": "Basic",
+          "question": "What is the main job of the LM35 Temperature Monitor with TFT Display and Buzzer?",
+          "options": {
+            "A": "Provide internet access to the circuit",
+            "B": "Store program files on the Arduino",
+            "C": "Convert the circuit into a computer keyboard",
+            "D": "Use LM35 to temperature and provide the intended buzzer response"
+          },
+          "answer": "D",
+          "correct_answer": "Use LM35 to temperature and provide the intended buzzer response",
+          "explanation": "The project uses LM35 to sense temperature, then drives its output."
+        },
+        {
+          "id": 2,
+          "difficulty": "Basic",
+          "question": "In the LM35 Temperature Monitor with TFT Display and Buzzer, which part provides the temperature input?",
+          "options": {
+            "A": "USB cable",
+            "B": "buzzer",
+            "C": "LM35",
+            "D": "TFT display"
+          },
+          "answer": "C",
+          "correct_answer": "LM35",
+          "explanation": "LM35 is the sensing/input part for this project."
+        },
+        {
+          "id": 3,
+          "difficulty": "Intermediate",
+          "question": "Which Arduino operation is most directly used to obtain the input in this project?",
+          "options": {
+            "A": "delay() only",
+            "B": "pinMode() only",
+            "C": "Serial.println() only",
+            "D": "analogRead()"
+          },
+          "answer": "D",
+          "correct_answer": "analogRead()",
+          "explanation": "The program uses analogRead() to read or process the project's input."
+        },
+        {
+          "id": 4,
+          "difficulty": "Intermediate",
+          "question": "If the project detects this condition — temperature below 20°C or above 40°C — what should the program do?",
+          "options": {
+            "A": "Ignore the sensor and keep every output ON",
+            "B": "Restart the Arduino immediately",
+            "C": "display NORMAL and keep buzzer OFF when temperature is within 20–40°C",
+            "D": "Change the USB port"
+          },
+          "answer": "C",
+          "correct_answer": "display NORMAL and keep buzzer OFF when temperature is within 20–40°C",
+          "explanation": "The supplied project logic specifies: display NORMAL and keep buzzer OFF when temperature is within 20–40°C."
+        },
+        {
+          "id": 5,
+          "difficulty": "Difficult",
+          "question": "A student changes the sensor but leaves the old input-reading logic unchanged. What should be checked first?",
+          "options": {
+            "A": "Whether the LCD font is larger",
+            "B": "Whether the USB cable is longer",
+            "C": "Whether the project name is changed",
+            "D": "Whether the new sensor's signal type, pin connection and reading method match the code"
+          },
+          "answer": "D",
+          "correct_answer": "Whether the new sensor's signal type, pin connection and reading method match the code",
+          "explanation": "Sensor compatibility depends on its wiring, signal type and correct read operation (analogRead())."
+        }
+      ],
+      "Ultrasonic Obstacle Alert with Buzzer": [
+        {
+          "id": 6,
+          "difficulty": "Basic",
+          "question": "What is the main job of the Ultrasonic Obstacle Alert with Buzzer?",
+          "options": {
+            "A": "Store program files on the Arduino",
+            "B": "Convert the circuit into a computer keyboard",
+            "C": "Provide internet access to the circuit",
+            "D": "Use HC-SR04 to distance and provide the intended buzzer response"
+          },
+          "answer": "D",
+          "correct_answer": "Use HC-SR04 to distance and provide the intended buzzer response",
+          "explanation": "The project uses HC-SR04 to sense distance, then drives its output."
+        },
+        {
+          "id": 7,
+          "difficulty": "Basic",
+          "question": "In the Ultrasonic Obstacle Alert with Buzzer, which part provides the distance input?",
+          "options": {
+            "A": "buzzer",
+            "B": "buzzer",
+            "C": "HC-SR04",
+            "D": "USB cable"
+          },
+          "answer": "C",
+          "correct_answer": "HC-SR04",
+          "explanation": "HC-SR04 is the sensing/input part for this project."
+        },
+        {
+          "id": 8,
+          "difficulty": "Intermediate",
+          "question": "Which Arduino operation is most directly used to obtain the input in this project?",
+          "options": {
+            "A": "delay() only",
+            "B": "pinMode() only",
+            "C": "TRIG and ECHO",
+            "D": "Serial.println() only"
+          },
+          "answer": "C",
+          "correct_answer": "TRIG and ECHO",
+          "explanation": "The program uses TRIG and ECHO to read or process the project's input."
+        },
+        {
+          "id": 9,
+          "difficulty": "Intermediate",
+          "question": "If the project detects this condition — distance is greater than 0 cm and at most 20 cm — what should the program do?",
+          "options": {
+            "A": "turn buzzer OFF when the measured distance is above 20 cm",
+            "B": "Restart the Arduino immediately",
+            "C": "Ignore the sensor and keep every output ON",
+            "D": "Change the USB port"
+          },
+          "answer": "A",
+          "correct_answer": "turn buzzer OFF when the measured distance is above 20 cm",
+          "explanation": "The supplied project logic specifies: turn buzzer OFF when the measured distance is above 20 cm."
+        },
+        {
+          "id": 10,
+          "difficulty": "Difficult",
+          "question": "A student changes the sensor but leaves the old input-reading logic unchanged. What should be checked first?",
+          "options": {
+            "A": "Whether the USB cable is longer",
+            "B": "Whether the project name is changed",
+            "C": "Whether the new sensor's signal type, pin connection and reading method match the code",
+            "D": "Whether the LCD font is larger"
+          },
+          "answer": "C",
+          "correct_answer": "Whether the new sensor's signal type, pin connection and reading method match the code",
+          "explanation": "Sensor compatibility depends on its wiring, signal type and correct read operation (TRIG and ECHO)."
+        }
+      ],
+      "Joystick, Servo Motor and Buzzer System": [
+        {
+          "id": 11,
+          "difficulty": "Basic",
+          "question": "What is the main job of the Joystick, Servo Motor and Buzzer System?",
+          "options": {
+            "A": "Provide internet access to the circuit",
+            "B": "Store program files on the Arduino",
+            "C": "Convert the circuit into a computer keyboard",
+            "D": "Use joystick to X-axis position and provide the intended buzzer response"
+          },
+          "answer": "D",
+          "correct_answer": "Use joystick to X-axis position and provide the intended buzzer response",
+          "explanation": "The project uses joystick to sense X-axis position, then drives its output."
+        },
+        {
+          "id": 12,
+          "difficulty": "Basic",
+          "question": "In the Joystick, Servo Motor and Buzzer System, which part provides the X-axis position input?",
+          "options": {
+            "A": "USB cable",
+            "B": "buzzer",
+            "C": "servo motor",
+            "D": "joystick"
+          },
+          "answer": "D",
+          "correct_answer": "joystick",
+          "explanation": "joystick is the sensing/input part for this project."
+        },
+        {
+          "id": 13,
+          "difficulty": "Intermediate",
+          "question": "Which Arduino operation is most directly used to obtain the input in this project?",
+          "options": {
+            "A": "pinMode() only",
+            "B": "delay() only",
+            "C": "analogRead() and digitalRead()",
+            "D": "Serial.println() only"
+          },
+          "answer": "C",
+          "correct_answer": "analogRead() and digitalRead()",
+          "explanation": "The program uses analogRead() and digitalRead() to read or process the project's input."
+        },
+        {
+          "id": 14,
+          "difficulty": "Intermediate",
+          "question": "If the project detects this condition — joystick moves away from centre or its switch is pressed — what should the program do?",
+          "options": {
+            "A": "Restart the Arduino immediately",
+            "B": "Change the USB port",
+            "C": "Ignore the sensor and keep every output ON",
+            "D": "return the servo to 90 degrees at startup"
+          },
+          "answer": "D",
+          "correct_answer": "return the servo to 90 degrees at startup",
+          "explanation": "The supplied project logic specifies: return the servo to 90 degrees at startup."
+        },
+        {
+          "id": 15,
+          "difficulty": "Difficult",
+          "question": "A student changes the sensor but leaves the old input-reading logic unchanged. What should be checked first?",
+          "options": {
+            "A": "Whether the new sensor's signal type, pin connection and reading method match the code",
+            "B": "Whether the LCD font is larger",
+            "C": "Whether the project name is changed",
+            "D": "Whether the USB cable is longer"
+          },
+          "answer": "A",
+          "correct_answer": "Whether the new sensor's signal type, pin connection and reading method match the code",
+          "explanation": "Sensor compatibility depends on its wiring, signal type and correct read operation (analogRead() and digitalRead())."
+        }
+      ],
+      "IR Obstacle Sensor with LED and Buzzer": [
+        {
+          "id": 16,
+          "difficulty": "Basic",
+          "question": "What is the main job of the IR Obstacle Sensor with LED and Buzzer?",
+          "options": {
+            "A": "Convert the circuit into a computer keyboard",
+            "B": "Use IR obstacle sensor to object detection and provide the intended buzzer response",
+            "C": "Provide internet access to the circuit",
+            "D": "Store program files on the Arduino"
+          },
+          "answer": "B",
+          "correct_answer": "Use IR obstacle sensor to object detection and provide the intended buzzer response",
+          "explanation": "The project uses IR obstacle sensor to sense object detection, then drives its output."
+        },
+        {
+          "id": 17,
+          "difficulty": "Basic",
+          "question": "In the IR Obstacle Sensor with LED and Buzzer, which part provides the object detection input?",
+          "options": {
+            "A": "LED",
+            "B": "USB cable",
+            "C": "buzzer",
+            "D": "IR obstacle sensor"
+          },
+          "answer": "D",
+          "correct_answer": "IR obstacle sensor",
+          "explanation": "IR obstacle sensor is the sensing/input part for this project."
+        },
+        {
+          "id": 18,
+          "difficulty": "Intermediate",
+          "question": "Which Arduino operation is most directly used to obtain the input in this project?",
+          "options": {
+            "A": "delay() only",
+            "B": "pinMode() only",
+            "C": "digitalRead()",
+            "D": "Serial.println() only"
+          },
+          "answer": "C",
+          "correct_answer": "digitalRead()",
+          "explanation": "The program uses digitalRead() to read or process the project's input."
+        },
+        {
+          "id": 19,
+          "difficulty": "Intermediate",
+          "question": "If the project detects this condition — sensor output is LOW — what should the program do?",
+          "options": {
+            "A": "Change the USB port",
+            "B": "Restart the Arduino immediately",
+            "C": "Ignore the sensor and keep every output ON",
+            "D": "turn both LED and buzzer OFF when no object is detected"
+          },
+          "answer": "D",
+          "correct_answer": "turn both LED and buzzer OFF when no object is detected",
+          "explanation": "The supplied project logic specifies: turn both LED and buzzer OFF when no object is detected."
+        },
+        {
+          "id": 20,
+          "difficulty": "Difficult",
+          "question": "A student changes the sensor but leaves the old input-reading logic unchanged. What should be checked first?",
+          "options": {
+            "A": "Whether the new sensor's signal type, pin connection and reading method match the code",
+            "B": "Whether the LCD font is larger",
+            "C": "Whether the USB cable is longer",
+            "D": "Whether the project name is changed"
+          },
+          "answer": "A",
+          "correct_answer": "Whether the new sensor's signal type, pin connection and reading method match the code",
+          "explanation": "Sensor compatibility depends on its wiring, signal type and correct read operation (digitalRead())."
+        }
+      ],
+      "Ultrasonic Distance Meter": [
+        {
+          "id": 21,
+          "difficulty": "Basic",
+          "question": "What is the main job of the Ultrasonic Distance Meter?",
+          "options": {
+            "A": "Use HC-SR04 to distance and provide the intended buzzer response",
+            "B": "Provide internet access to the circuit",
+            "C": "Convert the circuit into a computer keyboard",
+            "D": "Store program files on the Arduino"
+          },
+          "answer": "A",
+          "correct_answer": "Use HC-SR04 to distance and provide the intended buzzer response",
+          "explanation": "The project uses HC-SR04 to sense distance, then drives its output."
+        },
+        {
+          "id": 22,
+          "difficulty": "Basic",
+          "question": "In the Ultrasonic Distance Meter, which part provides the distance input?",
+          "options": {
+            "A": "HC-SR04",
+            "B": "USB cable",
+            "C": "buzzer",
+            "D": "16x2 I2C LCD"
+          },
+          "answer": "A",
+          "correct_answer": "HC-SR04",
+          "explanation": "HC-SR04 is the sensing/input part for this project."
+        },
+        {
+          "id": 23,
+          "difficulty": "Intermediate",
+          "question": "Which Arduino operation is most directly used to obtain the input in this project?",
+          "options": {
+            "A": "delay() only",
+            "B": "pinMode() only",
+            "C": "Serial.println() only",
+            "D": "pulseIn(echoPin, HIGH, 30000)"
+          },
+          "answer": "D",
+          "correct_answer": "pulseIn(echoPin, HIGH, 30000)",
+          "explanation": "The program uses pulseIn(echoPin, HIGH, 30000) to read or process the project's input."
+        },
+        {
+          "id": 24,
+          "difficulty": "Intermediate",
+          "question": "If the project detects this condition — distance is less than 10 cm — what should the program do?",
+          "options": {
+            "A": "Restart the Arduino immediately",
+            "B": "Change the USB port",
+            "C": "show Out of range and stop the buzzer when duration is zero",
+            "D": "Ignore the sensor and keep every output ON"
+          },
+          "answer": "C",
+          "correct_answer": "show Out of range and stop the buzzer when duration is zero",
+          "explanation": "The supplied project logic specifies: show Out of range and stop the buzzer when duration is zero."
+        },
+        {
+          "id": 25,
+          "difficulty": "Difficult",
+          "question": "A student changes the sensor but leaves the old input-reading logic unchanged. What should be checked first?",
+          "options": {
+            "A": "Whether the USB cable is longer",
+            "B": "Whether the new sensor's signal type, pin connection and reading method match the code",
+            "C": "Whether the LCD font is larger",
+            "D": "Whether the project name is changed"
+          },
+          "answer": "B",
+          "correct_answer": "Whether the new sensor's signal type, pin connection and reading method match the code",
+          "explanation": "Sensor compatibility depends on its wiring, signal type and correct read operation (pulseIn(echoPin, HIGH, 30000))."
+        }
+      ],
+      "Parking Distance Alert": [
+        {
+          "id": 26,
+          "difficulty": "Basic",
+          "question": "What is the main job of the Parking Distance Alert?",
+          "options": {
+            "A": "Store program files on the Arduino",
+            "B": "Convert the circuit into a computer keyboard",
+            "C": "Use HC-SR04 to distance and provide the intended buzzer response",
+            "D": "Provide internet access to the circuit"
+          },
+          "answer": "C",
+          "correct_answer": "Use HC-SR04 to distance and provide the intended buzzer response",
+          "explanation": "The project uses HC-SR04 to sense distance, then drives its output."
+        },
+        {
+          "id": 27,
+          "difficulty": "Basic",
+          "question": "In the Parking Distance Alert, which part provides the distance input?",
+          "options": {
+            "A": "USB cable",
+            "B": "buzzer",
+            "C": "LCD",
+            "D": "HC-SR04"
+          },
+          "answer": "D",
+          "correct_answer": "HC-SR04",
+          "explanation": "HC-SR04 is the sensing/input part for this project."
+        },
+        {
+          "id": 28,
+          "difficulty": "Intermediate",
+          "question": "Which Arduino operation is most directly used to obtain the input in this project?",
+          "options": {
+            "A": "delay() only",
+            "B": "pinMode() only",
+            "C": "pulseIn(echoPin, HIGH, 30000)",
+            "D": "Serial.println() only"
+          },
+          "answer": "C",
+          "correct_answer": "pulseIn(echoPin, HIGH, 30000)",
+          "explanation": "The program uses pulseIn(echoPin, HIGH, 30000) to read or process the project's input."
+        },
+        {
+          "id": 29,
+          "difficulty": "Intermediate",
+          "question": "If the project detects this condition — beep continuously at 10 cm or less; faster/shorter intervals as distance increases — what should the program do?",
+          "options": {
+            "A": "Change the USB port",
+            "B": "Ignore the sensor and keep every output ON",
+            "C": "stop the buzzer when distance is greater than 50 cm",
+            "D": "Restart the Arduino immediately"
+          },
+          "answer": "C",
+          "correct_answer": "stop the buzzer when distance is greater than 50 cm",
+          "explanation": "The supplied project logic specifies: stop the buzzer when distance is greater than 50 cm."
+        },
+        {
+          "id": 30,
+          "difficulty": "Difficult",
+          "question": "A student changes the sensor but leaves the old input-reading logic unchanged. What should be checked first?",
+          "options": {
+            "A": "Whether the new sensor's signal type, pin connection and reading method match the code",
+            "B": "Whether the LCD font is larger",
+            "C": "Whether the USB cable is longer",
+            "D": "Whether the project name is changed"
+          },
+          "answer": "A",
+          "correct_answer": "Whether the new sensor's signal type, pin connection and reading method match the code",
+          "explanation": "Sensor compatibility depends on its wiring, signal type and correct read operation (pulseIn(echoPin, HIGH, 30000))."
+        }
+      ],
+      "Automatic Night Lamp": [
+        {
+          "id": 31,
+          "difficulty": "Basic",
+          "question": "What is the main job of the Automatic Night Lamp?",
+          "options": {
+            "A": "Provide internet access to the circuit",
+            "B": "Use LDR and PIR to light level and motion and provide the intended lamp response",
+            "C": "Convert the circuit into a computer keyboard",
+            "D": "Store program files on the Arduino"
+          },
+          "answer": "B",
+          "correct_answer": "Use LDR and PIR to light level and motion and provide the intended lamp response",
+          "explanation": "The project uses LDR and PIR to sense light level and motion, then drives its output."
+        },
+        {
+          "id": 32,
+          "difficulty": "Basic",
+          "question": "In the Automatic Night Lamp, which part provides the light level and motion input?",
+          "options": {
+            "A": "LDR and PIR",
+            "B": "USB cable",
+            "C": "lamp",
+            "D": "relay module"
+          },
+          "answer": "A",
+          "correct_answer": "LDR and PIR",
+          "explanation": "LDR and PIR is the sensing/input part for this project."
+        },
+        {
+          "id": 33,
+          "difficulty": "Intermediate",
+          "question": "Which Arduino operation is most directly used to obtain the input in this project?",
+          "options": {
+            "A": "analogRead() for LDR and digitalRead() for PIR",
+            "B": "delay() only",
+            "C": "Serial.println() only",
+            "D": "pinMode() only"
+          },
+          "answer": "A",
+          "correct_answer": "analogRead() for LDR and digitalRead() for PIR",
+          "explanation": "The program uses analogRead() for LDR and digitalRead() for PIR to read or process the project's input."
+        },
+        {
+          "id": 34,
+          "difficulty": "Intermediate",
+          "question": "If the project detects this condition — it is dark AND motion is detected — what should the program do?",
+          "options": {
+            "A": "Ignore the sensor and keep every output ON",
+            "B": "Change the USB port",
+            "C": "keep the active-LOW relay OFF if either it is bright or no motion is detected",
+            "D": "Restart the Arduino immediately"
+          },
+          "answer": "C",
+          "correct_answer": "keep the active-LOW relay OFF if either it is bright or no motion is detected",
+          "explanation": "The supplied project logic specifies: keep the active-LOW relay OFF if either it is bright or no motion is detected."
+        },
+        {
+          "id": 35,
+          "difficulty": "Difficult",
+          "question": "A student changes the sensor but leaves the old input-reading logic unchanged. What should be checked first?",
+          "options": {
+            "A": "Whether the LCD font is larger",
+            "B": "Whether the USB cable is longer",
+            "C": "Whether the new sensor's signal type, pin connection and reading method match the code",
+            "D": "Whether the project name is changed"
+          },
+          "answer": "C",
+          "correct_answer": "Whether the new sensor's signal type, pin connection and reading method match the code",
+          "explanation": "Sensor compatibility depends on its wiring, signal type and correct read operation (analogRead() for LDR and digitalRead() for PIR)."
+        }
+      ],
+      "IR Object Counter": [
+        {
+          "id": 36,
+          "difficulty": "Basic",
+          "question": "What is the main job of the IR Object Counter?",
+          "options": {
+            "A": "Store program files on the Arduino",
+            "B": "Provide internet access to the circuit",
+            "C": "Convert the circuit into a computer keyboard",
+            "D": "Use two IR sensors to entry and exit events and provide the intended entry/exit counters response"
+          },
+          "answer": "D",
+          "correct_answer": "Use two IR sensors to entry and exit events and provide the intended entry/exit counters response",
+          "explanation": "The project uses two IR sensors to sense entry and exit events, then drives its output."
+        },
+        {
+          "id": 37,
+          "difficulty": "Basic",
+          "question": "In the IR Object Counter, which part provides the entry and exit events input?",
+          "options": {
+            "A": "16x2 I2C LCD",
+            "B": "two IR sensors",
+            "C": "entry/exit counters",
+            "D": "USB cable"
+          },
+          "answer": "B",
+          "correct_answer": "two IR sensors",
+          "explanation": "two IR sensors is the sensing/input part for this project."
+        },
+        {
+          "id": 38,
+          "difficulty": "Intermediate",
+          "question": "Which Arduino operation is most directly used to obtain the input in this project?",
+          "options": {
+            "A": "digitalRead()",
+            "B": "Serial.println() only",
+            "C": "delay() only",
+            "D": "pinMode() only"
+          },
+          "answer": "A",
+          "correct_answer": "digitalRead()",
+          "explanation": "The program uses digitalRead() to read or process the project's input."
+        },
+        {
+          "id": 39,
+          "difficulty": "Intermediate",
+          "question": "If the project detects this condition — entry sensor detects a new entry — what should the program do?",
+          "options": {
+            "A": "Ignore the sensor and keep every output ON",
+            "B": "do not reduce totalCount below zero when an exit is detected",
+            "C": "Change the USB port",
+            "D": "Restart the Arduino immediately"
+          },
+          "answer": "B",
+          "correct_answer": "do not reduce totalCount below zero when an exit is detected",
+          "explanation": "The supplied project logic specifies: do not reduce totalCount below zero when an exit is detected."
+        },
+        {
+          "id": 40,
+          "difficulty": "Difficult",
+          "question": "A student changes the sensor but leaves the old input-reading logic unchanged. What should be checked first?",
+          "options": {
+            "A": "Whether the project name is changed",
+            "B": "Whether the LCD font is larger",
+            "C": "Whether the USB cable is longer",
+            "D": "Whether the new sensor's signal type, pin connection and reading method match the code"
+          },
+          "answer": "D",
+          "correct_answer": "Whether the new sensor's signal type, pin connection and reading method match the code",
+          "explanation": "Sensor compatibility depends on its wiring, signal type and correct read operation (digitalRead())."
+        }
+      ],
+      "Door / Entry Alert": [
+        {
+          "id": 41,
+          "difficulty": "Basic",
+          "question": "What is the main job of the Door / Entry Alert?",
+          "options": {
+            "A": "Convert the circuit into a computer keyboard",
+            "B": "Store program files on the Arduino",
+            "C": "Use IR obstacle sensor to object/person at the door and provide the intended buzzer response",
+            "D": "Provide internet access to the circuit"
+          },
+          "answer": "C",
+          "correct_answer": "Use IR obstacle sensor to object/person at the door and provide the intended buzzer response",
+          "explanation": "The project uses IR obstacle sensor to sense object/person at the door, then drives its output."
+        },
+        {
+          "id": 42,
+          "difficulty": "Basic",
+          "question": "In the Door / Entry Alert, which part provides the object/person at the door input?",
+          "options": {
+            "A": "buzzer",
+            "B": "LCD",
+            "C": "IR obstacle sensor",
+            "D": "USB cable"
+          },
+          "answer": "C",
+          "correct_answer": "IR obstacle sensor",
+          "explanation": "IR obstacle sensor is the sensing/input part for this project."
+        },
+        {
+          "id": 43,
+          "difficulty": "Intermediate",
+          "question": "Which Arduino operation is most directly used to obtain the input in this project?",
+          "options": {
+            "A": "pinMode() only",
+            "B": "delay() only",
+            "C": "Serial.println() only",
+            "D": "digitalRead()"
+          },
+          "answer": "D",
+          "correct_answer": "digitalRead()",
+          "explanation": "The program uses digitalRead() to read or process the project's input."
+        },
+        {
+          "id": 44,
+          "difficulty": "Intermediate",
+          "question": "If the project detects this condition — sensor output becomes LOW — what should the program do?",
+          "options": {
+            "A": "Change the USB port",
+            "B": "display the door alert and activate the buzzer only while detection is active",
+            "C": "Restart the Arduino immediately",
+            "D": "Ignore the sensor and keep every output ON"
+          },
+          "answer": "B",
+          "correct_answer": "display the door alert and activate the buzzer only while detection is active",
+          "explanation": "The supplied project logic specifies: display the door alert and activate the buzzer only while detection is active."
+        },
+        {
+          "id": 45,
+          "difficulty": "Difficult",
+          "question": "A student changes the sensor but leaves the old input-reading logic unchanged. What should be checked first?",
+          "options": {
+            "A": "Whether the LCD font is larger",
+            "B": "Whether the new sensor's signal type, pin connection and reading method match the code",
+            "C": "Whether the project name is changed",
+            "D": "Whether the USB cable is longer"
+          },
+          "answer": "B",
+          "correct_answer": "Whether the new sensor's signal type, pin connection and reading method match the code",
+          "explanation": "Sensor compatibility depends on its wiring, signal type and correct read operation (digitalRead())."
+        }
+      ],
+      "Temperature and Humidity Monitor": [
+        {
+          "id": 46,
+          "difficulty": "Basic",
+          "question": "What is the main job of the Temperature and Humidity Monitor?",
+          "options": {
+            "A": "Provide internet access to the circuit",
+            "B": "Use DHT11 to temperature and humidity and provide the intended status display response",
+            "C": "Convert the circuit into a computer keyboard",
+            "D": "Store program files on the Arduino"
+          },
+          "answer": "B",
+          "correct_answer": "Use DHT11 to temperature and humidity and provide the intended status display response",
+          "explanation": "The project uses DHT11 to sense temperature and humidity, then drives its output."
+        },
+        {
+          "id": 47,
+          "difficulty": "Basic",
+          "question": "In the Temperature and Humidity Monitor, which part provides the temperature and humidity input?",
+          "options": {
+            "A": "USB cable",
+            "B": "LCD",
+            "C": "status display",
+            "D": "DHT11"
+          },
+          "answer": "D",
+          "correct_answer": "DHT11",
+          "explanation": "DHT11 is the sensing/input part for this project."
+        },
+        {
+          "id": 48,
+          "difficulty": "Intermediate",
+          "question": "Which Arduino operation is most directly used to obtain the input in this project?",
+          "options": {
+            "A": "delay() only",
+            "B": "Serial.println() only",
+            "C": "DHT library read functions",
+            "D": "pinMode() only"
+          },
+          "answer": "C",
+          "correct_answer": "DHT library read functions",
+          "explanation": "The program uses DHT library read functions to read or process the project's input."
+        },
+        {
+          "id": 49,
+          "difficulty": "Intermediate",
+          "question": "If the project detects this condition — a reading is outside the configured safe range — what should the program do?",
+          "options": {
+            "A": "Change the USB port",
+            "B": "check sensor wiring and valid readings before displaying measurements",
+            "C": "Ignore the sensor and keep every output ON",
+            "D": "Restart the Arduino immediately"
+          },
+          "answer": "B",
+          "correct_answer": "check sensor wiring and valid readings before displaying measurements",
+          "explanation": "The supplied project logic specifies: check sensor wiring and valid readings before displaying measurements."
+        },
+        {
+          "id": 50,
+          "difficulty": "Difficult",
+          "question": "A student changes the sensor but leaves the old input-reading logic unchanged. What should be checked first?",
+          "options": {
+            "A": "Whether the LCD font is larger",
+            "B": "Whether the USB cable is longer",
+            "C": "Whether the project name is changed",
+            "D": "Whether the new sensor's signal type, pin connection and reading method match the code"
+          },
+          "answer": "D",
+          "correct_answer": "Whether the new sensor's signal type, pin connection and reading method match the code",
+          "explanation": "Sensor compatibility depends on its wiring, signal type and correct read operation (DHT library read functions)."
+        }
+      ],
+      "Humidity Monitor with Buzzer": [
+        {
+          "id": 51,
+          "difficulty": "Basic",
+          "question": "What is the main job of the Humidity Monitor with Buzzer?",
+          "options": {
+            "A": "Convert the circuit into a computer keyboard",
+            "B": "Store program files on the Arduino",
+            "C": "Provide internet access to the circuit",
+            "D": "Use DHT11 to humidity and provide the intended buzzer response"
+          },
+          "answer": "D",
+          "correct_answer": "Use DHT11 to humidity and provide the intended buzzer response",
+          "explanation": "The project uses DHT11 to sense humidity, then drives its output."
+        },
+        {
+          "id": 52,
+          "difficulty": "Basic",
+          "question": "In the Humidity Monitor with Buzzer, which part provides the humidity input?",
+          "options": {
+            "A": "LCD",
+            "B": "USB cable",
+            "C": "buzzer",
+            "D": "DHT11"
+          },
+          "answer": "D",
+          "correct_answer": "DHT11",
+          "explanation": "DHT11 is the sensing/input part for this project."
+        },
+        {
+          "id": 53,
+          "difficulty": "Intermediate",
+          "question": "Which Arduino operation is most directly used to obtain the input in this project?",
+          "options": {
+            "A": "DHT library read functions",
+            "B": "pinMode() only",
+            "C": "Serial.println() only",
+            "D": "delay() only"
+          },
+          "answer": "A",
+          "correct_answer": "DHT library read functions",
+          "explanation": "The program uses DHT library read functions to read or process the project's input."
+        },
+        {
+          "id": 54,
+          "difficulty": "Intermediate",
+          "question": "If the project detects this condition — humidity crosses the configured threshold — what should the program do?",
+          "options": {
+            "A": "keep the buzzer OFF when humidity returns to the acceptable range",
+            "B": "Restart the Arduino immediately",
+            "C": "Change the USB port",
+            "D": "Ignore the sensor and keep every output ON"
+          },
+          "answer": "A",
+          "correct_answer": "keep the buzzer OFF when humidity returns to the acceptable range",
+          "explanation": "The supplied project logic specifies: keep the buzzer OFF when humidity returns to the acceptable range."
+        },
+        {
+          "id": 55,
+          "difficulty": "Difficult",
+          "question": "A student changes the sensor but leaves the old input-reading logic unchanged. What should be checked first?",
+          "options": {
+            "A": "Whether the project name is changed",
+            "B": "Whether the new sensor's signal type, pin connection and reading method match the code",
+            "C": "Whether the USB cable is longer",
+            "D": "Whether the LCD font is larger"
+          },
+          "answer": "B",
+          "correct_answer": "Whether the new sensor's signal type, pin connection and reading method match the code",
+          "explanation": "Sensor compatibility depends on its wiring, signal type and correct read operation (DHT library read functions)."
+        }
+      ],
+      "Temperature Warning Alarm": [
+        {
+          "id": 56,
+          "difficulty": "Basic",
+          "question": "What is the main job of the Temperature Warning Alarm?",
+          "options": {
+            "A": "Use LM35 or DHT11 temperature sensor to temperature and provide the intended buzzer response",
+            "B": "Convert the circuit into a computer keyboard",
+            "C": "Store program files on the Arduino",
+            "D": "Provide internet access to the circuit"
+          },
+          "answer": "A",
+          "correct_answer": "Use LM35 or DHT11 temperature sensor to temperature and provide the intended buzzer response",
+          "explanation": "The project uses LM35 or DHT11 temperature sensor to sense temperature, then drives its output."
+        },
+        {
+          "id": 57,
+          "difficulty": "Basic",
+          "question": "In the Temperature Warning Alarm, which part provides the temperature input?",
+          "options": {
+            "A": "LM35 or DHT11 temperature sensor",
+            "B": "display/Serial Monitor",
+            "C": "buzzer",
+            "D": "USB cable"
+          },
+          "answer": "A",
+          "correct_answer": "LM35 or DHT11 temperature sensor",
+          "explanation": "LM35 or DHT11 temperature sensor is the sensing/input part for this project."
+        },
+        {
+          "id": 58,
+          "difficulty": "Intermediate",
+          "question": "Which Arduino operation is most directly used to obtain the input in this project?",
+          "options": {
+            "A": "delay() only",
+            "B": "Serial.println() only",
+            "C": "pinMode() only",
+            "D": "sensor read function"
+          },
+          "answer": "D",
+          "correct_answer": "sensor read function",
+          "explanation": "The program uses sensor read function to read or process the project's input."
+        },
+        {
+          "id": 59,
+          "difficulty": "Intermediate",
+          "question": "If the project detects this condition — temperature crosses the warning limit — what should the program do?",
+          "options": {
+            "A": "Restart the Arduino immediately",
+            "B": "Change the USB port",
+            "C": "Ignore the sensor and keep every output ON",
+            "D": "use separate lower and upper limits to avoid a warning at normal temperature"
+          },
+          "answer": "D",
+          "correct_answer": "use separate lower and upper limits to avoid a warning at normal temperature",
+          "explanation": "The supplied project logic specifies: use separate lower and upper limits to avoid a warning at normal temperature."
+        },
+        {
+          "id": 60,
+          "difficulty": "Difficult",
+          "question": "A student changes the sensor but leaves the old input-reading logic unchanged. What should be checked first?",
+          "options": {
+            "A": "Whether the project name is changed",
+            "B": "Whether the new sensor's signal type, pin connection and reading method match the code",
+            "C": "Whether the USB cable is longer",
+            "D": "Whether the LCD font is larger"
+          },
+          "answer": "B",
+          "correct_answer": "Whether the new sensor's signal type, pin connection and reading method match the code",
+          "explanation": "Sensor compatibility depends on its wiring, signal type and correct read operation (sensor read function)."
+        }
+      ],
+      "Soil Moisture Sensor with LCD": [
+        {
+          "id": 61,
+          "difficulty": "Basic",
+          "question": "What is the main job of the Soil Moisture Sensor with LCD?",
+          "options": {
+            "A": "Store program files on the Arduino",
+            "B": "Provide internet access to the circuit",
+            "C": "Convert the circuit into a computer keyboard",
+            "D": "Use soil moisture sensor to soil moisture level and provide the intended status indicator response"
+          },
+          "answer": "D",
+          "correct_answer": "Use soil moisture sensor to soil moisture level and provide the intended status indicator response",
+          "explanation": "The project uses soil moisture sensor to sense soil moisture level, then drives its output."
+        },
+        {
+          "id": 62,
+          "difficulty": "Basic",
+          "question": "In the Soil Moisture Sensor with LCD, which part provides the soil moisture level input?",
+          "options": {
+            "A": "USB cable",
+            "B": "status indicator",
+            "C": "soil moisture sensor",
+            "D": "16x2 I2C LCD"
+          },
+          "answer": "C",
+          "correct_answer": "soil moisture sensor",
+          "explanation": "soil moisture sensor is the sensing/input part for this project."
+        },
+        {
+          "id": 63,
+          "difficulty": "Intermediate",
+          "question": "Which Arduino operation is most directly used to obtain the input in this project?",
+          "options": {
+            "A": "delay() only",
+            "B": "pinMode() only",
+            "C": "analogRead()",
+            "D": "Serial.println() only"
+          },
+          "answer": "C",
+          "correct_answer": "analogRead()",
+          "explanation": "The program uses analogRead() to read or process the project's input."
+        },
+        {
+          "id": 64,
+          "difficulty": "Intermediate",
+          "question": "If the project detects this condition — reading indicates dry soil — what should the program do?",
+          "options": {
+            "A": "calibrate dry and wet readings before selecting the moisture threshold",
+            "B": "Ignore the sensor and keep every output ON",
+            "C": "Change the USB port",
+            "D": "Restart the Arduino immediately"
+          },
+          "answer": "A",
+          "correct_answer": "calibrate dry and wet readings before selecting the moisture threshold",
+          "explanation": "The supplied project logic specifies: calibrate dry and wet readings before selecting the moisture threshold."
+        },
+        {
+          "id": 65,
+          "difficulty": "Difficult",
+          "question": "A student changes the sensor but leaves the old input-reading logic unchanged. What should be checked first?",
+          "options": {
+            "A": "Whether the project name is changed",
+            "B": "Whether the new sensor's signal type, pin connection and reading method match the code",
+            "C": "Whether the USB cable is longer",
+            "D": "Whether the LCD font is larger"
+          },
+          "answer": "B",
+          "correct_answer": "Whether the new sensor's signal type, pin connection and reading method match the code",
+          "explanation": "Sensor compatibility depends on its wiring, signal type and correct read operation (analogRead())."
+        }
+      ],
+      "Digital Potentiometer Demo / LED Brightness Control": [
+        {
+          "id": 66,
+          "difficulty": "Basic",
+          "question": "What is the main job of the Digital Potentiometer Demo / LED Brightness Control?",
+          "options": {
+            "A": "Provide internet access to the circuit",
+            "B": "Store program files on the Arduino",
+            "C": "Use potentiometer to knob position / voltage and provide the intended LED brightness response",
+            "D": "Convert the circuit into a computer keyboard"
+          },
+          "answer": "C",
+          "correct_answer": "Use potentiometer to knob position / voltage and provide the intended LED brightness response",
+          "explanation": "The project uses potentiometer to sense knob position / voltage, then drives its output."
+        },
+        {
+          "id": 67,
+          "difficulty": "Basic",
+          "question": "In the Digital Potentiometer Demo / LED Brightness Control, which part provides the knob position / voltage input?",
+          "options": {
+            "A": "LED",
+            "B": "LED brightness",
+            "C": "potentiometer",
+            "D": "USB cable"
+          },
+          "answer": "C",
+          "correct_answer": "potentiometer",
+          "explanation": "potentiometer is the sensing/input part for this project."
+        },
+        {
+          "id": 68,
+          "difficulty": "Intermediate",
+          "question": "Which Arduino operation is most directly used to obtain the input in this project?",
+          "options": {
+            "A": "pinMode() only",
+            "B": "delay() only",
+            "C": "Serial.println() only",
+            "D": "analogRead() and analogWrite()"
+          },
+          "answer": "D",
+          "correct_answer": "analogRead() and analogWrite()",
+          "explanation": "The program uses analogRead() and analogWrite() to read or process the project's input."
+        },
+        {
+          "id": 69,
+          "difficulty": "Intermediate",
+          "question": "If the project detects this condition — knob is rotated and the analog reading changes — what should the program do?",
+          "options": {
+            "A": "use PWM-capable output for analogWrite() brightness control",
+            "B": "Change the USB port",
+            "C": "Ignore the sensor and keep every output ON",
+            "D": "Restart the Arduino immediately"
+          },
+          "answer": "A",
+          "correct_answer": "use PWM-capable output for analogWrite() brightness control",
+          "explanation": "The supplied project logic specifies: use PWM-capable output for analogWrite() brightness control."
+        },
+        {
+          "id": 70,
+          "difficulty": "Difficult",
+          "question": "A student changes the sensor but leaves the old input-reading logic unchanged. What should be checked first?",
+          "options": {
+            "A": "Whether the LCD font is larger",
+            "B": "Whether the new sensor's signal type, pin connection and reading method match the code",
+            "C": "Whether the USB cable is longer",
+            "D": "Whether the project name is changed"
+          },
+          "answer": "B",
+          "correct_answer": "Whether the new sensor's signal type, pin connection and reading method match the code",
+          "explanation": "Sensor compatibility depends on its wiring, signal type and correct read operation (analogRead() and analogWrite())."
+        }
+      ],
+      "Push Button Counter": [
+        {
+          "id": 71,
+          "difficulty": "Basic",
+          "question": "What is the main job of the Push Button Counter?",
+          "options": {
+            "A": "Provide internet access to the circuit",
+            "B": "Store program files on the Arduino",
+            "C": "Convert the circuit into a computer keyboard",
+            "D": "Use push button to button press and provide the intended counter value response"
+          },
+          "answer": "D",
+          "correct_answer": "Use push button to button press and provide the intended counter value response",
+          "explanation": "The project uses push button to sense button press, then drives its output."
+        },
+        {
+          "id": 72,
+          "difficulty": "Basic",
+          "question": "In the Push Button Counter, which part provides the button press input?",
+          "options": {
+            "A": "display/Serial Monitor",
+            "B": "USB cable",
+            "C": "push button",
+            "D": "counter value"
+          },
+          "answer": "C",
+          "correct_answer": "push button",
+          "explanation": "push button is the sensing/input part for this project."
+        },
+        {
+          "id": 73,
+          "difficulty": "Intermediate",
+          "question": "Which Arduino operation is most directly used to obtain the input in this project?",
+          "options": {
+            "A": "Serial.println() only",
+            "B": "pinMode() only",
+            "C": "digitalRead()",
+            "D": "delay() only"
+          },
+          "answer": "C",
+          "correct_answer": "digitalRead()",
+          "explanation": "The program uses digitalRead() to read or process the project's input."
+        },
+        {
+          "id": 74,
+          "difficulty": "Intermediate",
+          "question": "If the project detects this condition — button changes from released to pressed — what should the program do?",
+          "options": {
+            "A": "Restart the Arduino immediately",
+            "B": "use edge detection or debounce so one press is not counted repeatedly",
+            "C": "Change the USB port",
+            "D": "Ignore the sensor and keep every output ON"
+          },
+          "answer": "B",
+          "correct_answer": "use edge detection or debounce so one press is not counted repeatedly",
+          "explanation": "The supplied project logic specifies: use edge detection or debounce so one press is not counted repeatedly."
+        },
+        {
+          "id": 75,
+          "difficulty": "Difficult",
+          "question": "A student changes the sensor but leaves the old input-reading logic unchanged. What should be checked first?",
+          "options": {
+            "A": "Whether the project name is changed",
+            "B": "Whether the new sensor's signal type, pin connection and reading method match the code",
+            "C": "Whether the LCD font is larger",
+            "D": "Whether the USB cable is longer"
+          },
+          "answer": "B",
+          "correct_answer": "Whether the new sensor's signal type, pin connection and reading method match the code",
+          "explanation": "Sensor compatibility depends on its wiring, signal type and correct read operation (digitalRead())."
+        }
+      ],
+      "Buzzer Melody / Beep Patterns": [
+        {
+          "id": 76,
+          "difficulty": "Basic",
+          "question": "What is the main job of the Buzzer Melody / Beep Patterns?",
+          "options": {
+            "A": "Provide internet access to the circuit",
+            "B": "Convert the circuit into a computer keyboard",
+            "C": "Store program files on the Arduino",
+            "D": "Use buzzer to timing/frequency values and provide the intended sound pattern response"
+          },
+          "answer": "D",
+          "correct_answer": "Use buzzer to timing/frequency values and provide the intended sound pattern response",
+          "explanation": "The project uses buzzer to sense timing/frequency values, then drives its output."
+        },
+        {
+          "id": 77,
+          "difficulty": "Basic",
+          "question": "In the Buzzer Melody / Beep Patterns, which part provides the timing/frequency values input?",
+          "options": {
+            "A": "buzzer",
+            "B": "USB cable",
+            "C": "sound pattern",
+            "D": "buzzer"
+          },
+          "answer": "A",
+          "correct_answer": "buzzer",
+          "explanation": "buzzer is the sensing/input part for this project."
+        },
+        {
+          "id": 78,
+          "difficulty": "Intermediate",
+          "question": "Which Arduino operation is most directly used to obtain the input in this project?",
+          "options": {
+            "A": "delay() only",
+            "B": "Serial.println() only",
+            "C": "pinMode() only",
+            "D": "tone() and noTone()"
+          },
+          "answer": "D",
+          "correct_answer": "tone() and noTone()",
+          "explanation": "The program uses tone() and noTone() to read or process the project's input."
+        },
+        {
+          "id": 79,
+          "difficulty": "Intermediate",
+          "question": "If the project detects this condition — a note duration ends — what should the program do?",
+          "options": {
+            "A": "call noTone() or change frequency to create separate notes and pauses",
+            "B": "Restart the Arduino immediately",
+            "C": "Ignore the sensor and keep every output ON",
+            "D": "Change the USB port"
+          },
+          "answer": "A",
+          "correct_answer": "call noTone() or change frequency to create separate notes and pauses",
+          "explanation": "The supplied project logic specifies: call noTone() or change frequency to create separate notes and pauses."
+        },
+        {
+          "id": 80,
+          "difficulty": "Difficult",
+          "question": "A student changes the sensor but leaves the old input-reading logic unchanged. What should be checked first?",
+          "options": {
+            "A": "Whether the USB cable is longer",
+            "B": "Whether the new sensor's signal type, pin connection and reading method match the code",
+            "C": "Whether the project name is changed",
+            "D": "Whether the LCD font is larger"
+          },
+          "answer": "B",
+          "correct_answer": "Whether the new sensor's signal type, pin connection and reading method match the code",
+          "explanation": "Sensor compatibility depends on its wiring, signal type and correct read operation (tone() and noTone())."
+        }
+      ],
+      "Traffic Light Controller": [
+        {
+          "id": 81,
+          "difficulty": "Basic",
+          "question": "What is the main job of the Traffic Light Controller?",
+          "options": {
+            "A": "Provide internet access to the circuit",
+            "B": "Use LEDs to sequence timing and provide the intended traffic signal response",
+            "C": "Convert the circuit into a computer keyboard",
+            "D": "Store program files on the Arduino"
+          },
+          "answer": "B",
+          "correct_answer": "Use LEDs to sequence timing and provide the intended traffic signal response",
+          "explanation": "The project uses LEDs to sense sequence timing, then drives its output."
+        },
+        {
+          "id": 82,
+          "difficulty": "Basic",
+          "question": "In the Traffic Light Controller, which part provides the sequence timing input?",
+          "options": {
+            "A": "LEDs",
+            "B": "traffic signal",
+            "C": "red, yellow and green LEDs",
+            "D": "USB cable"
+          },
+          "answer": "A",
+          "correct_answer": "LEDs",
+          "explanation": "LEDs is the sensing/input part for this project."
+        },
+        {
+          "id": 83,
+          "difficulty": "Intermediate",
+          "question": "Which Arduino operation is most directly used to obtain the input in this project?",
+          "options": {
+            "A": "digitalWrite() and delay()",
+            "B": "pinMode() only",
+            "C": "delay() only",
+            "D": "Serial.println() only"
+          },
+          "answer": "A",
+          "correct_answer": "digitalWrite() and delay()",
+          "explanation": "The program uses digitalWrite() and delay() to read or process the project's input."
+        },
+        {
+          "id": 84,
+          "difficulty": "Difficult",
+          "question": "If the project detects this condition — green phase ends and yellow phase begins — what should the program do?",
+          "options": {
+            "A": "Restart the Arduino immediately",
+            "B": "Change the USB port",
+            "C": "ensure conflicting red and green outputs are not ON together",
+            "D": "Ignore the sensor and keep every output ON"
+          },
+          "answer": "C",
+          "correct_answer": "ensure conflicting red and green outputs are not ON together",
+          "explanation": "The supplied project logic specifies: ensure conflicting red and green outputs are not ON together."
+        }
+      ],
+      "Pedestrian Crossing Signal": [
+        {
+          "id": 85,
+          "difficulty": "Basic",
+          "question": "What is the main job of the Pedestrian Crossing Signal?",
+          "options": {
+            "A": "Convert the circuit into a computer keyboard",
+            "B": "Provide internet access to the circuit",
+            "C": "Use push button to pedestrian request and provide the intended crossing indication response",
+            "D": "Store program files on the Arduino"
+          },
+          "answer": "C",
+          "correct_answer": "Use push button to pedestrian request and provide the intended crossing indication response",
+          "explanation": "The project uses push button to sense pedestrian request, then drives its output."
+        },
+        {
+          "id": 86,
+          "difficulty": "Basic",
+          "question": "In the Pedestrian Crossing Signal, which part provides the pedestrian request input?",
+          "options": {
+            "A": "LED traffic signals",
+            "B": "USB cable",
+            "C": "push button",
+            "D": "crossing indication"
+          },
+          "answer": "C",
+          "correct_answer": "push button",
+          "explanation": "push button is the sensing/input part for this project."
+        },
+        {
+          "id": 87,
+          "difficulty": "Intermediate",
+          "question": "Which Arduino operation is most directly used to obtain the input in this project?",
+          "options": {
+            "A": "delay() only",
+            "B": "digitalRead() and digitalWrite()",
+            "C": "Serial.println() only",
+            "D": "pinMode() only"
+          },
+          "answer": "B",
+          "correct_answer": "digitalRead() and digitalWrite()",
+          "explanation": "The program uses digitalRead() and digitalWrite() to read or process the project's input."
+        },
+        {
+          "id": 88,
+          "difficulty": "Difficult",
+          "question": "If the project detects this condition — a pedestrian presses the request button — what should the program do?",
+          "options": {
+            "A": "Ignore the sensor and keep every output ON",
+            "B": "Change the USB port",
+            "C": "Restart the Arduino immediately",
+            "D": "return to the normal traffic sequence after the crossing interval"
+          },
+          "answer": "D",
+          "correct_answer": "return to the normal traffic sequence after the crossing interval",
+          "explanation": "The supplied project logic specifies: return to the normal traffic sequence after the crossing interval."
+        }
+      ],
+      "LCD Menu System": [
+        {
+          "id": 89,
+          "difficulty": "Basic",
+          "question": "What is the main job of the LCD Menu System?",
+          "options": {
+            "A": "Convert the circuit into a computer keyboard",
+            "B": "Provide internet access to the circuit",
+            "C": "Use push buttons to user menu selection and provide the intended menu text response",
+            "D": "Store program files on the Arduino"
+          },
+          "answer": "C",
+          "correct_answer": "Use push buttons to user menu selection and provide the intended menu text response",
+          "explanation": "The project uses push buttons to sense user menu selection, then drives its output."
+        },
+        {
+          "id": 90,
+          "difficulty": "Basic",
+          "question": "In the LCD Menu System, which part provides the user menu selection input?",
+          "options": {
+            "A": "menu text",
+            "B": "push buttons",
+            "C": "USB cable",
+            "D": "16x2 I2C LCD"
+          },
+          "answer": "B",
+          "correct_answer": "push buttons",
+          "explanation": "push buttons is the sensing/input part for this project."
+        },
+        {
+          "id": 91,
+          "difficulty": "Intermediate",
+          "question": "Which Arduino operation is most directly used to obtain the input in this project?",
+          "options": {
+            "A": "pinMode() only",
+            "B": "lcd.setCursor() and lcd.print()",
+            "C": "Serial.println() only",
+            "D": "delay() only"
+          },
+          "answer": "B",
+          "correct_answer": "lcd.setCursor() and lcd.print()",
+          "explanation": "The program uses lcd.setCursor() and lcd.print() to read or process the project's input."
+        },
+        {
+          "id": 92,
+          "difficulty": "Difficult",
+          "question": "If the project detects this condition — user presses a navigation button — what should the program do?",
+          "options": {
+            "A": "Change the USB port",
+            "B": "Restart the Arduino immediately",
+            "C": "Ignore the sensor and keep every output ON",
+            "D": "keep the selected menu index within the valid menu-item range"
+          },
+          "answer": "D",
+          "correct_answer": "keep the selected menu index within the valid menu-item range",
+          "explanation": "The supplied project logic specifies: keep the selected menu index within the valid menu-item range."
+        }
+      ],
+      "Electronic Reaction Timer": [
+        {
+          "id": 93,
+          "difficulty": "Basic",
+          "question": "What is the main job of the Electronic Reaction Timer?",
+          "options": {
+            "A": "Convert the circuit into a computer keyboard",
+            "B": "Store program files on the Arduino",
+            "C": "Use push button to reaction timing event and provide the intended reaction-time result response",
+            "D": "Provide internet access to the circuit"
+          },
+          "answer": "C",
+          "correct_answer": "Use push button to reaction timing event and provide the intended reaction-time result response",
+          "explanation": "The project uses push button to sense reaction timing event, then drives its output."
+        },
+        {
+          "id": 94,
+          "difficulty": "Basic",
+          "question": "In the Electronic Reaction Timer, which part provides the reaction timing event input?",
+          "options": {
+            "A": "push button",
+            "B": "reaction-time result",
+            "C": "USB cable",
+            "D": "LED"
+          },
+          "answer": "A",
+          "correct_answer": "push button",
+          "explanation": "push button is the sensing/input part for this project."
+        },
+        {
+          "id": 95,
+          "difficulty": "Intermediate",
+          "question": "Which Arduino operation is most directly used to obtain the input in this project?",
+          "options": {
+            "A": "millis() and digitalRead()",
+            "B": "pinMode() only",
+            "C": "Serial.println() only",
+            "D": "delay() only"
+          },
+          "answer": "A",
+          "correct_answer": "millis() and digitalRead()",
+          "explanation": "The program uses millis() and digitalRead() to read or process the project's input."
+        },
+        {
+          "id": 96,
+          "difficulty": "Difficult",
+          "question": "If the project detects this condition — the user presses after the LED signal — what should the program do?",
+          "options": {
+            "A": "Restart the Arduino immediately",
+            "B": "use millis() subtraction to measure elapsed time without blocking delays",
+            "C": "Ignore the sensor and keep every output ON",
+            "D": "Change the USB port"
+          },
+          "answer": "B",
+          "correct_answer": "use millis() subtraction to measure elapsed time without blocking delays",
+          "explanation": "The supplied project logic specifies: use millis() subtraction to measure elapsed time without blocking delays."
+        }
+      ],
+      "Digital Dice": [
+        {
+          "id": 97,
+          "difficulty": "Basic",
+          "question": "What is the main job of the Digital Dice?",
+          "options": {
+            "A": "Provide internet access to the circuit",
+            "B": "Convert the circuit into a computer keyboard",
+            "C": "Store program files on the Arduino",
+            "D": "Use push button to roll request and provide the intended random dice value response"
+          },
+          "answer": "D",
+          "correct_answer": "Use push button to roll request and provide the intended random dice value response",
+          "explanation": "The project uses push button to sense roll request, then drives its output."
+        },
+        {
+          "id": 98,
+          "difficulty": "Basic",
+          "question": "In the Digital Dice, which part provides the roll request input?",
+          "options": {
+            "A": "LEDs or display",
+            "B": "USB cable",
+            "C": "random dice value",
+            "D": "push button"
+          },
+          "answer": "D",
+          "correct_answer": "push button",
+          "explanation": "push button is the sensing/input part for this project."
+        },
+        {
+          "id": 99,
+          "difficulty": "Intermediate",
+          "question": "Which Arduino operation is most directly used to obtain the input in this project?",
+          "options": {
+            "A": "pinMode() only",
+            "B": "delay() only",
+            "C": "random()",
+            "D": "Serial.println() only"
+          },
+          "answer": "C",
+          "correct_answer": "random()",
+          "explanation": "The program uses random() to read or process the project's input."
+        },
+        {
+          "id": 100,
+          "difficulty": "Difficult",
+          "question": "If the project detects this condition — user presses the roll button — what should the program do?",
+          "options": {
+            "A": "Restart the Arduino immediately",
+            "B": "Ignore the sensor and keep every output ON",
+            "C": "Change the USB port",
+            "D": "use random(1, 7) because the upper limit is exclusive"
+          },
+          "answer": "D",
+          "correct_answer": "use random(1, 7) because the upper limit is exclusive",
+          "explanation": "The supplied project logic specifies: use random(1, 7) because the upper limit is exclusive."
+        }
+      ]
+    }
+  },
+  "component_categories": {
+    "total_components": 20,
+    "total_questions": 50,
+    "components": {
+      "Arduino Uno": [
+        {
+          "id": 101,
+          "difficulty": "Basic",
+          "question": "Which type of board is Arduino Uno?",
+          "options": {
+            "A": "A microcontroller development board",
+            "B": "A motor driver",
+            "C": "A temperature sensor",
+            "D": "A Wi-Fi router"
+          },
+          "answer": "A",
+          "correct_answer": "A microcontroller development board",
+          "explanation": "Arduino Uno is the controller that runs the sketch and interfaces with components."
+        },
+        {
+          "id": 102,
+          "difficulty": "Intermediate",
+          "question": "Why are both 5V and GND connections commonly needed?",
+          "options": {
+            "A": "They replace the signal wire",
+            "B": "They provide power and a common electrical reference",
+            "C": "They increase the clock speed",
+            "D": "They store the program"
+          },
+          "answer": "B",
+          "correct_answer": "They provide power and a common electrical reference",
+          "explanation": "A circuit needs a supply and a shared ground reference."
+        },
+        {
+          "id": 103,
+          "difficulty": "Difficult",
+          "question": "An analog sensor is connected to A0. Which function reads its value?",
+          "options": {
+            "A": "analogRead(A0)",
+            "B": "digitalWrite(A0, HIGH)",
+            "C": "pinMode(A0, OUTPUT)",
+            "D": "tone(A0, 500)"
+          },
+          "answer": "A",
+          "correct_answer": "analogRead(A0)",
+          "explanation": "analogRead() samples the voltage at an analog input."
+        }
+      ],
+      "LM35 temperature sensor": [
+        {
+          "id": 104,
+          "difficulty": "Basic",
+          "question": "What physical quantity does the LM35 measure?",
+          "options": {
+            "A": "Humidity",
+            "B": "Distance",
+            "C": "Light intensity",
+            "D": "Temperature"
+          },
+          "answer": "D",
+          "correct_answer": "Temperature",
+          "explanation": "LM35 is an analog temperature sensor."
+        },
+        {
+          "id": 105,
+          "difficulty": "Intermediate",
+          "question": "In the supplied LM35 sketch, what is the temperature conversion after voltage is calculated?",
+          "options": {
+            "A": "temperature = 1023 / voltage",
+            "B": "temperature = voltage × 10",
+            "C": "temperature = voltage × 100",
+            "D": "temperature = voltage / 100"
+          },
+          "answer": "C",
+          "correct_answer": "temperature = voltage × 100",
+          "explanation": "The code converts LM35 output voltage to Celsius using voltage × 100."
+        },
+        {
+          "id": 106,
+          "difficulty": "Difficult",
+          "question": "The analog reading is 0.25 V. Using the supplied conversion, what temperature is calculated?",
+          "options": {
+            "A": "2.5°C",
+            "B": "250°C",
+            "C": "0.25°C",
+            "D": "25°C"
+          },
+          "answer": "D",
+          "correct_answer": "25°C",
+          "explanation": "0.25 × 100 = 25°C."
+        }
+      ],
+      "HC-SR04 ultrasonic sensor": [
+        {
+          "id": 107,
+          "difficulty": "Basic",
+          "question": "Which two pins control distance measurement on HC-SR04?",
+          "options": {
+            "A": "SDA and SCL",
+            "B": "TRIG and ECHO",
+            "C": "MOSI and MISO",
+            "D": "TX and RX"
+          },
+          "answer": "B",
+          "correct_answer": "TRIG and ECHO",
+          "explanation": "TRIG sends the ultrasonic pulse; ECHO reports its return time."
+        },
+        {
+          "id": 108,
+          "difficulty": "Intermediate",
+          "question": "Why does the code calculate duration × 0.0343 / 2?",
+          "options": {
+            "A": "To calculate the LCD address",
+            "B": "To convert the round-trip echo time into one-way distance in centimetres",
+            "C": "To convert voltage into temperature",
+            "D": "To set the buzzer frequency"
+          },
+          "answer": "B",
+          "correct_answer": "To convert the round-trip echo time into one-way distance in centimetres",
+          "explanation": "The pulse travels to the object and back, so the result is divided by two."
+        },
+        {
+          "id": 109,
+          "difficulty": "Difficult",
+          "question": "pulseIn() returns zero with a timeout. What should the program infer?",
+          "options": {
+            "A": "No valid echo was received within the timeout",
+            "B": "The sensor measured 1023 cm",
+            "C": "The object is exactly 0 cm away",
+            "D": "The Arduino has entered bootloader mode"
+          },
+          "answer": "A",
+          "correct_answer": "No valid echo was received within the timeout",
+          "explanation": "A zero duration is treated as an out-of-range reading in the supplied meter code."
+        }
+      ],
+      "IR obstacle sensor": [
+        {
+          "id": 110,
+          "difficulty": "Basic",
+          "question": "What does an IR obstacle sensor detect in these projects?",
+          "options": {
+            "A": "Temperature",
+            "B": "Water level",
+            "C": "An object using reflected infrared light",
+            "D": "Air humidity"
+          },
+          "answer": "C",
+          "correct_answer": "An object using reflected infrared light",
+          "explanation": "The module detects nearby objects using infrared reflection."
+        },
+        {
+          "id": 111,
+          "difficulty": "Intermediate",
+          "question": "In the supplied IR obstacle code, what does LOW indicate?",
+          "options": {
+            "A": "The object is definitely more than 1 metre away",
+            "B": "The Arduino is powered off",
+            "C": "The sensor is disconnected in every case",
+            "D": "An object is detected"
+          },
+          "answer": "D",
+          "correct_answer": "An object is detected",
+          "explanation": "The provided sketch treats LOW as the detection state."
+        },
+        {
+          "id": 112,
+          "difficulty": "Difficult",
+          "question": "The LED stays ON after the object is removed. Which check is most useful first?",
+          "options": {
+            "A": "Check whether the sensor output returns to the no-object state and whether the code handles that state",
+            "B": "Remove the Arduino ground",
+            "C": "Change the baud rate to 115200 without changing code",
+            "D": "Increase the LCD contrast"
+          },
+          "answer": "A",
+          "correct_answer": "Check whether the sensor output returns to the no-object state and whether the code handles that state",
+          "explanation": "The output state and the corresponding else branch determine whether the LED turns OFF."
+        }
+      ],
+      "DHT11 sensor": [
+        {
+          "id": 113,
+          "difficulty": "Basic",
+          "question": "What two measurements can a DHT11 provide?",
+          "options": {
+            "A": "Distance and speed",
+            "B": "Voltage and current",
+            "C": "Light and motion",
+            "D": "Temperature and humidity"
+          },
+          "answer": "D",
+          "correct_answer": "Temperature and humidity",
+          "explanation": "DHT11 measures ambient temperature and relative humidity."
+        },
+        {
+          "id": 114,
+          "difficulty": "Intermediate",
+          "question": "Why does a DHT11 sketch commonly include a sensor library?",
+          "options": {
+            "A": "To generate PWM on every pin",
+            "B": "To format USB storage",
+            "C": "To control the Arduino bootloader",
+            "D": "To handle the sensor's digital data protocol and convert readings"
+          },
+          "answer": "D",
+          "correct_answer": "To handle the sensor's digital data protocol and convert readings",
+          "explanation": "The library provides functions for reading and interpreting DHT data."
+        },
+        {
+          "id": 115,
+          "difficulty": "Difficult",
+          "question": "A DHT11 reading is invalid. What should be checked before using it in calculations?",
+          "options": {
+            "A": "Sensor wiring, data pin configuration and whether the read returned a valid value",
+            "B": "The colour of the jumper wires only",
+            "C": "The LCD backlight brightness",
+            "D": "The Arduino board name"
+          },
+          "answer": "A",
+          "correct_answer": "Sensor wiring, data pin configuration and whether the read returned a valid value",
+          "explanation": "Invalid readings should not be treated as real temperature or humidity values."
+        }
+      ],
+      "LDR": [
+        {
+          "id": 116,
+          "difficulty": "Basic",
+          "question": "What does an LDR respond to?",
+          "options": {
+            "A": "Light intensity",
+            "B": "Sound frequency",
+            "C": "Water pressure",
+            "D": "Magnetic field"
+          },
+          "answer": "A",
+          "correct_answer": "Light intensity",
+          "explanation": "An LDR's resistance changes with the amount of light."
+        },
+        {
+          "id": 117,
+          "difficulty": "Intermediate",
+          "question": "In a voltage-divider circuit, why is analogRead() suitable for an LDR?",
+          "options": {
+            "A": "It detects Wi-Fi packets",
+            "B": "It measures the sensor's resistance directly",
+            "C": "It reads the changing analog voltage produced by the divider",
+            "D": "It switches the relay without a driver"
+          },
+          "answer": "C",
+          "correct_answer": "It reads the changing analog voltage produced by the divider",
+          "explanation": "The Arduino reads the divider voltage, not resistance directly."
+        },
+        {
+          "id": 118,
+          "difficulty": "Difficult",
+          "question": "The night-lamp code defines darkness as lightValue < 400. A reading of 250 means what?",
+          "options": {
+            "A": "The PIR has detected motion",
+            "B": "The code classifies the environment as dark",
+            "C": "The code classifies it as bright",
+            "D": "The relay is definitely faulty"
+          },
+          "answer": "B",
+          "correct_answer": "The code classifies the environment as dark",
+          "explanation": "250 is below the configured darkness threshold of 400."
+        }
+      ],
+      "PIR motion sensor": [
+        {
+          "id": 119,
+          "difficulty": "Basic",
+          "question": "What does a PIR sensor detect?",
+          "options": {
+            "A": "Motion of warm bodies",
+            "B": "Distance using sound",
+            "C": "Ambient light level",
+            "D": "Soil moisture"
+          },
+          "answer": "A",
+          "correct_answer": "Motion of warm bodies",
+          "explanation": "PIR sensors detect changes in infrared energy associated with movement."
+        },
+        {
+          "id": 120,
+          "difficulty": "Intermediate",
+          "question": "In the supplied night-lamp sketch, what does a HIGH PIR reading mean?",
+          "options": {
+            "A": "Motion is detected",
+            "B": "The relay is disconnected",
+            "C": "The LCD is busy",
+            "D": "It is dark"
+          },
+          "answer": "A",
+          "correct_answer": "Motion is detected",
+          "explanation": "The code sets motionDetected when motion == HIGH."
+        },
+        {
+          "id": 121,
+          "difficulty": "Difficult",
+          "question": "The lamp should turn ON only when dark and motion is present. Which logic expresses this?",
+          "options": {
+            "A": "isDark == motionDetected",
+            "B": "isDark || motionDetected",
+            "C": "!isDark && !motionDetected",
+            "D": "isDark && motionDetected"
+          },
+          "answer": "D",
+          "correct_answer": "isDark && motionDetected",
+          "explanation": "The AND operator requires both conditions to be true."
+        }
+      ],
+      "Relay module": [
+        {
+          "id": 122,
+          "difficulty": "Basic",
+          "question": "What is the main function of a relay module?",
+          "options": {
+            "A": "Act as an electrically controlled switch",
+            "B": "Display text",
+            "C": "Generate ultrasonic pulses",
+            "D": "Measure temperature"
+          },
+          "answer": "A",
+          "correct_answer": "Act as an electrically controlled switch",
+          "explanation": "A relay lets a low-voltage control circuit switch another circuit."
+        },
+        {
+          "id": 123,
+          "difficulty": "Intermediate",
+          "question": "What do COM, NO and NC identify on a relay?",
+          "options": {
+            "A": "Clock, Data and Ground pins",
+            "B": "Common, Normally Open and Normally Closed contacts",
+            "C": "Three Arduino analog pins",
+            "D": "Current, Voltage and Output values"
+          },
+          "answer": "B",
+          "correct_answer": "Common, Normally Open and Normally Closed contacts",
+          "explanation": "These are the relay's contact terminals."
+        },
+        {
+          "id": 124,
+          "difficulty": "Difficult",
+          "question": "The supplied night-lamp code uses an active-LOW relay. Which output state activates it?",
+          "options": {
+            "A": "INPUT_PULLUP",
+            "B": "INPUT",
+            "C": "LOW",
+            "D": "HIGH"
+          },
+          "answer": "C",
+          "correct_answer": "LOW",
+          "explanation": "The code comments and writes LOW for relay ON."
+        }
+      ],
+      "16x2 I2C LCD": [
+        {
+          "id": 125,
+          "difficulty": "Basic",
+          "question": "What does 16x2 mean?",
+          "options": {
+            "A": "16 rows and 2 characters",
+            "B": "16 characters per row and 2 rows",
+            "C": "16 pixels by 2 pixels",
+            "D": "16 sensors and 2 outputs"
+          },
+          "answer": "B",
+          "correct_answer": "16 characters per row and 2 rows",
+          "explanation": "The display has two rows, each capable of showing 16 characters."
+        },
+        {
+          "id": 126,
+          "difficulty": "Intermediate",
+          "question": "Which two signal lines are used for I2C communication?",
+          "options": {
+            "A": "TX and RX only",
+            "B": "MOSI and MISO",
+            "C": "SDA and SCL",
+            "D": "TRIG and ECHO"
+          },
+          "answer": "C",
+          "correct_answer": "SDA and SCL",
+          "explanation": "SDA carries data and SCL carries the clock."
+        },
+        {
+          "id": 127,
+          "difficulty": "Difficult",
+          "question": "The LCD is blank but the Arduino program runs. Which is a sensible first check?",
+          "options": {
+            "A": "Verify power, GND, I2C address and SDA/SCL wiring",
+            "B": "Replace all code with random()",
+            "C": "Change the sensor threshold",
+            "D": "Connect the LCD data pin to the buzzer"
+          },
+          "answer": "A",
+          "correct_answer": "Verify power, GND, I2C address and SDA/SCL wiring",
+          "explanation": "A wrong address or I2C wiring can prevent the display from responding."
+        }
+      ],
+      "TFT display": [
+        {
+          "id": 128,
+          "difficulty": "Basic",
+          "question": "What does TFT stand for in TFT display?",
+          "options": {
+            "A": "Trigger Frequency Timer",
+            "B": "Temperature Feedback Terminal",
+            "C": "Thin-Film Transistor",
+            "D": "Two-Function Transmitter"
+          },
+          "answer": "C",
+          "correct_answer": "Thin-Film Transistor",
+          "explanation": "TFT is a display technology used in the project."
+        },
+        {
+          "id": 129,
+          "difficulty": "Intermediate",
+          "question": "In the supplied ST7735 setup, what is the purpose of the display library object?",
+          "options": {
+            "A": "To generate the buzzer tone",
+            "B": "To initialize and control the TFT using its configured pins",
+            "C": "To read the LM35 analog voltage",
+            "D": "To count button presses"
+          },
+          "answer": "B",
+          "correct_answer": "To initialize and control the TFT using its configured pins",
+          "explanation": "The Adafruit_ST7735 object controls display initialization and drawing."
+        },
+        {
+          "id": 130,
+          "difficulty": "Difficult",
+          "question": "If the TFT remains blank, which group of checks best matches the supplied sketch?",
+          "options": {
+            "A": "Change the ultrasonic timeout",
+            "B": "Check CS, DC and RST wiring plus display initialization",
+            "C": "Check only the DHT11 threshold",
+            "D": "Remove SPI and display library includes"
+          },
+          "answer": "B",
+          "correct_answer": "Check CS, DC and RST wiring plus display initialization",
+          "explanation": "The sketch defines TFT_CS, TFT_DC and TFT_RST and calls tft.initR()."
+        }
+      ],
+      "Buzzer": [
+        {
+          "id": 131,
+          "difficulty": "Basic",
+          "question": "What is the purpose of a buzzer in these circuits?",
+          "options": {
+            "A": "Produce an audible alert or sound",
+            "B": "Display numbers",
+            "C": "Measure light",
+            "D": "Store sensor readings"
+          },
+          "answer": "A",
+          "correct_answer": "Produce an audible alert or sound",
+          "explanation": "A buzzer provides sound feedback."
+        },
+        {
+          "id": 132,
+          "difficulty": "Intermediate",
+          "question": "Which Arduino functions generate a chosen-frequency tone and stop it?",
+          "options": {
+            "A": "analogRead() and analogWrite()",
+            "B": "tone() and noTone()",
+            "C": "pinMode() and digitalRead()",
+            "D": "map() and constrain()"
+          },
+          "answer": "B",
+          "correct_answer": "tone() and noTone()",
+          "explanation": "tone() starts a tone and noTone() stops it."
+        }
+      ],
+      "LED": [
+        {
+          "id": 133,
+          "difficulty": "Basic",
+          "question": "What does LED stand for?",
+          "options": {
+            "A": "Light Entry Detector",
+            "B": "Low Energy Display",
+            "C": "Light Emitting Diode",
+            "D": "Linear Electronic Device"
+          },
+          "answer": "C",
+          "correct_answer": "Light Emitting Diode",
+          "explanation": "An LED emits light when forward-biased."
+        },
+        {
+          "id": 134,
+          "difficulty": "Difficult",
+          "question": "Why is a current-limiting resistor normally placed in series with an LED?",
+          "options": {
+            "A": "To store program data",
+            "B": "To limit current and protect the LED",
+            "C": "To increase the supply voltage",
+            "D": "To convert analog input to digital"
+          },
+          "answer": "B",
+          "correct_answer": "To limit current and protect the LED",
+          "explanation": "Excessive current can damage an LED."
+        }
+      ],
+      "Servo motor": [
+        {
+          "id": 135,
+          "difficulty": "Intermediate",
+          "question": "What type of movement does a typical hobby servo provide?",
+          "options": {
+            "A": "Controlled angular position",
+            "B": "Ultrasonic distance measurement",
+            "C": "Continuous temperature measurement",
+            "D": "Light intensity measurement"
+          },
+          "answer": "A",
+          "correct_answer": "Controlled angular position",
+          "explanation": "The supplied project commands a servo angle."
+        },
+        {
+          "id": 136,
+          "difficulty": "Difficult",
+          "question": "What does myServo.attach(9) do?",
+          "options": {
+            "A": "Reads analog pin 9",
+            "B": "Associates the servo control signal with Arduino pin 9",
+            "C": "Starts Serial Monitor at 9 baud",
+            "D": "Sets the servo to 9 degrees"
+          },
+          "answer": "B",
+          "correct_answer": "Associates the servo control signal with Arduino pin 9",
+          "explanation": "attach() configures the pin used to control the servo."
+        }
+      ],
+      "Joystick module": [
+        {
+          "id": 137,
+          "difficulty": "Basic",
+          "question": "Which two analog values are commonly provided by a two-axis joystick?",
+          "options": {
+            "A": "TRIG and ECHO",
+            "B": "COM and NO",
+            "C": "SDA and SCL",
+            "D": "X-axis and Y-axis"
+          },
+          "answer": "D",
+          "correct_answer": "X-axis and Y-axis",
+          "explanation": "The joystick reports movement along two axes."
+        },
+        {
+          "id": 138,
+          "difficulty": "Intermediate",
+          "question": "Which function reads the joystick's X-axis analog output?",
+          "options": {
+            "A": "lcd.clear()",
+            "B": "digitalWrite()",
+            "C": "noTone()",
+            "D": "analogRead()"
+          },
+          "answer": "D",
+          "correct_answer": "analogRead()",
+          "explanation": "The supplied sketch reads joystickX using analogRead()."
+        }
+      ],
+      "Soil moisture sensor": [
+        {
+          "id": 139,
+          "difficulty": "Basic",
+          "question": "What does a soil moisture sensor estimate?",
+          "options": {
+            "A": "Object distance",
+            "B": "The moisture level in soil",
+            "C": "Room brightness",
+            "D": "Air temperature"
+          },
+          "answer": "B",
+          "correct_answer": "The moisture level in soil",
+          "explanation": "The sensor provides a reading related to water content in soil."
+        },
+        {
+          "id": 140,
+          "difficulty": "Difficult",
+          "question": "Why should dry and wet readings be measured during calibration?",
+          "options": {
+            "A": "To identify the Arduino COM port",
+            "B": "To choose a buzzer frequency",
+            "C": "To set the LCD I2C address",
+            "D": "To establish useful reference values for interpreting the sensor's range"
+          },
+          "answer": "D",
+          "correct_answer": "To establish useful reference values for interpreting the sensor's range",
+          "explanation": "Calibration maps raw sensor readings to meaningful dry/wet conditions."
+        }
+      ],
+      "Potentiometer": [
+        {
+          "id": 141,
+          "difficulty": "Intermediate",
+          "question": "What is a potentiometer?",
+          "options": {
+            "A": "A digital display",
+            "B": "A motion detector",
+            "C": "A variable resistor",
+            "D": "A sound generator"
+          },
+          "answer": "C",
+          "correct_answer": "A variable resistor",
+          "explanation": "Turning the knob changes the resistance ratio and wiper voltage."
+        },
+        {
+          "id": 142,
+          "difficulty": "Difficult",
+          "question": "Which potentiometer terminal provides the adjustable output voltage?",
+          "options": {
+            "A": "The centre terminal (wiper)",
+            "B": "The mounting nut",
+            "C": "Either outer terminal only",
+            "D": "The metal shaft"
+          },
+          "answer": "A",
+          "correct_answer": "The centre terminal (wiper)",
+          "explanation": "The wiper voltage changes as the knob rotates."
+        }
+      ],
+      "Push button": [
+        {
+          "id": 143,
+          "difficulty": "Basic",
+          "question": "What type of input does a push button provide?",
+          "options": {
+            "A": "Digital pressed/released state",
+            "B": "I2C display data",
+            "C": "Analog temperature",
+            "D": "Ultrasonic echo time"
+          },
+          "answer": "A",
+          "correct_answer": "Digital pressed/released state",
+          "explanation": "A button is commonly read as a digital input."
+        },
+        {
+          "id": 144,
+          "difficulty": "Intermediate",
+          "question": "What does INPUT_PULLUP do for a button input?",
+          "options": {
+            "A": "Turns the pin into an analog output",
+            "B": "Starts the serial connection",
+            "C": "Enables PWM on the pin",
+            "D": "Enables the internal pull-up resistor"
+          },
+          "answer": "D",
+          "correct_answer": "Enables the internal pull-up resistor",
+          "explanation": "The internal pull-up gives the input a defined HIGH state when the switch is open."
+        }
+      ],
+      "4x4 matrix keypad": [
+        {
+          "id": 145,
+          "difficulty": "Basic",
+          "question": "How many keys are present on a 4x4 matrix keypad?",
+          "options": {
+            "A": "8",
+            "B": "12",
+            "C": "4",
+            "D": "16"
+          },
+          "answer": "D",
+          "correct_answer": "16",
+          "explanation": "Four rows multiplied by four columns gives 16 keys."
+        },
+        {
+          "id": 146,
+          "difficulty": "Difficult",
+          "question": "How does a matrix keypad reduce the number of required input pins?",
+          "options": {
+            "A": "It connects every key to a separate power supply",
+            "B": "It communicates only through USB",
+            "C": "It converts keys into analog voltages",
+            "D": "It scans shared row and column lines"
+          },
+          "answer": "D",
+          "correct_answer": "It scans shared row and column lines",
+          "explanation": "Rows and columns are scanned to identify a pressed key."
+        }
+      ],
+      "Resistor": [
+        {
+          "id": 147,
+          "difficulty": "Intermediate",
+          "question": "What is the unit of electrical resistance?",
+          "options": {
+            "A": "Volt",
+            "B": "Ampere",
+            "C": "Watt-hour",
+            "D": "Ohm (Ω)"
+          },
+          "answer": "D",
+          "correct_answer": "Ohm (Ω)",
+          "explanation": "Resistance is measured in ohms."
+        },
+        {
+          "id": 148,
+          "difficulty": "Difficult",
+          "question": "Which law relates voltage, current and resistance?",
+          "options": {
+            "A": "Newton's law",
+            "B": "The inverse-square law",
+            "C": "Faraday's law only",
+            "D": "Ohm's law: V = I × R"
+          },
+          "answer": "D",
+          "correct_answer": "Ohm's law: V = I × R",
+          "explanation": "Ohm's law relates voltage, current and resistance."
+        }
+      ],
+      "Jumper wires and breadboard": [
+        {
+          "id": 149,
+          "difficulty": "Basic",
+          "question": "What is the purpose of jumper wires?",
+          "options": {
+            "A": "Generate PWM signals",
+            "B": "Store the Arduino sketch",
+            "C": "Make temporary electrical connections between components",
+            "D": "Measure temperature"
+          },
+          "answer": "C",
+          "correct_answer": "Make temporary electrical connections between components",
+          "explanation": "Jumper wires connect component pins and breadboard rows."
+        },
+        {
+          "id": 150,
+          "difficulty": "Intermediate",
+          "question": "Why is a shared GND connection important when modules connect to an Arduino?",
+          "options": {
+            "A": "It increases the sensor's measuring range",
+            "B": "It prevents all short circuits automatically",
+            "C": "It replaces the 5V supply",
+            "D": "It provides a common voltage reference for signal levels"
+          },
+          "answer": "D",
+          "correct_answer": "It provides a common voltage reference for signal levels",
+          "explanation": "Signals are interpreted relative to a common ground."
+        }
+      ]
+    }
+  }
+}

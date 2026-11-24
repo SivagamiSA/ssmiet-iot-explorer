@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; scroll-padding-top: 5rem; -webkit-text-size-adjust: 100%; }
+  body {
+    @apply bg-white font-sans text-ink antialiased;
+    overflow-x: clip;                      /* safety net: never scroll sideways */
+    overflow-wrap: break-word;             /* long emails / URLs wrap instead of overflowing */
+    padding-inline: env(safe-area-inset-left) env(safe-area-inset-right); /* phone notches in landscape */
+  }
+  h1, h2, h3 { @apply font-display tracking-tight; text-wrap: balance; }
+  a, button { -webkit-tap-highlight-color: rgba(232, 89, 12, 0.15); touch-action: manipulation; }
+  :focus-visible { @apply outline-2 outline-offset-2 outline-brand-500; }
+  /* 16px minimum stops iOS Safari zooming the page when a field is focused */
+  input, select, textarea { font-size: 1rem; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+}
+
+/* Reusable building blocks for every later stage (login, register, admin, simulator). See RESPONSIVE.md */
+@layer components {
+  .field-label { @apply mb-1.5 block text-sm font-medium text-ink; }
+  .input {
+    @apply min-h-12 w-full rounded-md border border-line bg-white px-4 py-3 text-base text-ink placeholder:text-ink-faint;
+    @apply focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500/30;
+  }
+  .input[aria-invalid="true"] { @apply border-red-600 ring-1 ring-red-600/30; }
+  .btn { @apply inline-flex min-h-12 touch-manipulation items-center justify-center rounded-md px-6 text-base font-semibold transition-colors sm:min-h-11 sm:text-sm; }
+  .btn-primary { @apply btn bg-brand-500 text-white shadow-sm hover:bg-brand-600 active:bg-brand-700 disabled:opacity-60; }
+  .btn-outline { @apply btn border border-brand-500 text-brand-600 hover:bg-brand-50 active:bg-brand-100; }
+  /* Wide tables / diagrams scroll inside their own box, never the page */
+  .scroll-x { @apply max-w-full overflow-x-auto overscroll-x-contain; -webkit-overflow-scrolling: touch; }
+  /* Centred, padded card for login / register / admin login forms */
+  .auth-card { @apply mx-auto w-full max-w-md rounded-lg border border-line bg-white p-5 shadow-card sm:p-8; }
+}
+
+/* ---------- Light animations (CSS only, no extra libraries) ---------- */
+@keyframes rise-in { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+@keyframes menu-in { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
+
+/* Whole page fades in when the route changes (see PageTransition in App.tsx) */
+.page-enter { animation: rise-in 0.35s cubic-bezier(0.22, 1, 0.36, 1) backwards; }
+/* Blocks fade up one after another: style={{ "--d": "80ms" }} sets the delay */
+.fade-up { animation: rise-in 0.5s cubic-bezier(0.22, 1, 0.36, 1) backwards; animation-delay: var(--d, 0ms); }
+.menu-enter { animation: menu-in 0.2s ease-out backwards; }
+/* Cards lift slightly on hover (mouse only, so phones never get a stuck hover) */
+.card-hover { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+@media (hover: hover) {
+  .card-hover:hover { transform: translateY(-3px); box-shadow: 0 2px 4px rgba(24, 33, 45, 0.06), 0 12px 26px rgba(24, 33, 45, 0.12); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .page-enter, .fade-up, .menu-enter { animation: none; }
+  .card-hover, .card-hover:hover { transition: none; transform: none; }
+}
+
+/* ---------- Learning platform animations ---------- */
+@keyframes float-y { 0%,100% { transform: translateY(0) rotate(-1.5deg); } 50% { transform: translateY(-10px) rotate(1.5deg); } }
+@keyframes spin-y { to { transform: rotateY(360deg); } }
+@keyframes dash-flow { to { stroke-dashoffset: -24; } }
+@keyframes ring-out { 0% { opacity: .9; transform: scale(.2); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes sweep { 0%,100% { transform: rotate(-60deg); } 50% { transform: rotate(60deg); } }
+@keyframes glow-pulse { 0%,100% { opacity: .25; transform: scale(.8); } 50% { opacity: .95; transform: scale(1.15); } }
+@keyframes draw { from { stroke-dashoffset: var(--len, 400); } to { stroke-dashoffset: 0; } }
+.float-y { animation: float-y 5s ease-in-out infinite; animation-delay: var(--d, 0s); }
+.spin-y { animation: spin-y 9s linear infinite; transform-style: preserve-3d; }
+.dash-flow { stroke-dasharray: 6 6; animation: dash-flow 0.7s linear infinite; }
+.ring { transform-box: fill-box; transform-origin: center; animation: ring-out 2s ease-out infinite; animation-delay: var(--d, 0s); }
+.sweep { transform-box: fill-box; transform-origin: 50% 100%; animation: sweep 3s ease-in-out infinite; }
+.glow-pulse { transform-box: fill-box; transform-origin: center; animation: glow-pulse 1.2s ease-in-out infinite; }
+.wire-draw { stroke-dasharray: var(--len, 400); animation: draw 1.2s ease-out forwards; animation-delay: var(--d, 0s); stroke-dashoffset: var(--len, 400); }
+.tilt-card { transition: transform .35s cubic-bezier(.22,1,.36,1), box-shadow .35s; transform-style: preserve-3d; }
+@media (hover: hover) { .tilt-card:hover { transform: perspective(700px) rotateX(6deg) rotateY(-10deg) translateY(-4px); box-shadow: 0 16px 30px rgba(232,89,12,.22); } .tilt-card:hover img { transform: translateZ(30px) scale(1.08) rotate(4deg); } }
+.tilt-card img { transition: transform .35s cubic-bezier(.22,1,.36,1); }
+@media (prefers-reduced-motion: reduce) { .float-y, .spin-y, .dash-flow, .ring, .sweep, .glow-pulse { animation: none; } .wire-draw { animation: none; stroke-dashoffset: 0; } .tilt-card, .tilt-card:hover, .tilt-card img, .tilt-card:hover img { transition: none; transform: none; } }
