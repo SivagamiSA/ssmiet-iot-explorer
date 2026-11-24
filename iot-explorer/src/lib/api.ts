@@ -15,7 +15,7 @@ export async function api<T>(path: string, opts: { method?: string; body?: unkno
   const token = tokenStore.get();
   let res: Response;
   try {
-    res = await fetch(`/api${path}`, {
+    res = await fetch(`${import.meta.env.VITE_API_URL}/api${path}`, {
       method: opts.method ?? (opts.body ? "POST" : "GET"),
       headers: { ...(opts.body ? { "Content-Type": "application/json" } : {}), ...(token ? { Authorization: `Bearer ${token}` } : {}) },
       body: opts.body ? JSON.stringify(opts.body) : undefined,
@@ -28,13 +28,13 @@ export async function api<T>(path: string, opts: { method?: string; body?: unkno
   return data as T;
 }
 
-/** Downloads a file from the API (used for CSV exports, which need the login token). */
-export async function downloadFile(path: string, filename: string) {
+/** Downloads a file from the API (used for CSV exports, which need the login token). */export async function downloadFile(path: string, filename: string) {
   const token = tokenStore.get();
   let res: Response;
-  try { res = await fetch(`/api${path}`, { headers: token ? { Authorization: `Bearer ${token}` } : {} }); }
+  try { res = await fetch(`${import.meta.env.VITE_API_URL}/api${path}`, { headers: token ? { Authorization: `Bearer ${token}` } : {} }); }
   catch { throw new ApiError("Cannot reach the server.", 0); }
   if (!res.ok) { const d = await res.json().catch(() => ({})); throw new ApiError(d.message ?? "Download failed.", res.status); }
   const url = URL.createObjectURL(await res.blob());
   const a = document.createElement("a"); a.href = url; a.download = filename; document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url);
 }
+
